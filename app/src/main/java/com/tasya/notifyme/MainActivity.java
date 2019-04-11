@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         createNotificationChannel();
-        setNotificationButtonState(true,false,true);
+        setNotificationButtonState(true,false,false);
         registerReceiver(mReceiver, new IntentFilter(ACTION_UPDATE_NOTIFICATION));
     }
 
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void cancelNotification() {
         mNotifyManager.cancel(NOTIFICATION_ID);
-        setNotificationButtonState(true,false,true);
+        setNotificationButtonState(true,false,false);
     }
 
     private NotificationCompat.Builder getNotificationBuilder() {
